@@ -61,19 +61,11 @@ export class ScoreComponent implements OnInit {
   starrate : number[] = [100,500,200,450,200];
   caserate : number[] = [1000,-20000,3000,4000,6000];
 
-  calculateResult()
+
+  calculateScore()
   {
-    //grade rate info
-    var grade_rate = this.gradeinfo[0]/4;
-    var diff_rate = this.gradeinfo[1]/4;
-    var user_rate = this.gradeinfo[2];
-
-    //rival info
-
-    var rival_rate = rivalRateCalc(this.rivalinfo);
 
     //score info
-
     var score = 0;
 
     score += this.rankinfo[0];
@@ -92,9 +84,39 @@ export class ScoreComponent implements OnInit {
       {
         score += this.caserate[i];
       }
+
     }
 
-    var final_score = Math.floor(score * grade_rate * diff_rate * rival_rate) + user_rate;
+    return score;
+
+  }
+
+  calculateRate()
+  {
+    //grade rate info
+    var grade_rate = this.gradeinfo[0]/4;
+    var diff_rate = this.gradeinfo[1]/4;
+
+    //rival info
+
+    var rival_rate = rivalRateCalc(this.rivalinfo);
+
+    var final_rate = Math.floor(grade_rate * diff_rate * rival_rate*1000)/1000;
+
+    return final_rate;
+
+  }
+
+  
+  calculateResult()
+  {
+    //grade rate info
+
+    var user_rate = this.gradeinfo[2];
+
+
+
+    var final_score = Math.floor(this.calculateScore() * this.calculateRate()) + user_rate;
 
 
     return final_score;
