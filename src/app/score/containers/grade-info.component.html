@@ -1,0 +1,40 @@
+<mat-card>
+    <mat-card-subtitle>그레이드 정보 입력</mat-card-subtitle>
+    <mat-card-content>
+        <div>
+            <mat-form-field class="w-96">          
+                <mat-label> 그레이드 </mat-label>
+                <mat-select [(ngModel)]="gradeinfo[0]">
+                    <mat-option [value]="1">1</mat-option>
+                    <mat-option [value]="2">2</mat-option>
+                    <mat-option [value]="3">3</mat-option>
+                    <mat-option [value]="4">4</mat-option>
+                    <mat-option [value]="5">5</mat-option>
+                    <mat-option [value]="6">6</mat-option>
+                    <mat-option [value]="8">7</mat-option>
+                  </mat-select>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field class="w-96">          
+                <mat-label> 난이도 </mat-label>
+                <mat-select [(ngModel)]="gradeinfo[1]">
+                    <mat-option [value]="3">Easy</mat-option>
+                    <mat-option [value]="4">Normal</mat-option>
+                    <mat-option [value]="5">Hard</mat-option>
+                  </mat-select>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field class="w-96">          
+                <mat-label> 사용률 </mat-label>
+                <input
+                  type="number"
+                  matInput
+                  [(ngModel)]="gradeinfo[2]"
+                  appSelectOnFocus
+                />
+            </mat-form-field>
+        </div>
+    </mat-card-content>
+</mat-card>

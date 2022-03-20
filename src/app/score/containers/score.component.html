@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="flex-center">
+      <h1 class="mat-h1">
+        그레이드 페스 점수 계산
+      </h1>
+      <button class="heading-button" (click)="reset()" mat-stroked-button>초기화</button>
+    </div>
+    <div class="layout">
+      <app-grade-info
+        [gradeinfo]="gradeinfo"
+      ></app-grade-info>
+      <app-rival-info
+        [rivalinfo]="rivalinfo"
+      ></app-rival-info>
+      <app-score-info
+        [rankinfo]="rankinfo"
+        [appealinfo]="appealinfo"
+        [starinfo]="starinfo"
+        [caseinfo]="caseinfo"
+      ></app-score-info>
+    </div>
+    <div>
+        <h4> 최종 페스 점수</h4>
+        <h2> {{calculateResult()}}  </h2>
+    </div>
+</div>

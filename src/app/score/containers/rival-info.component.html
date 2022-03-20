@@ -1,0 +1,20 @@
+<mat-card>
+    <mat-card-subtitle>라이벌 평가치 입력</mat-card-subtitle>
+    <mat-card-content>
+        <div *ngFor="let i of [0, 1, 2, 3, 4]">
+            <mat-form-field class="w-96">          
+                <mat-label> 라이벌{{ i + 1 }} </mat-label>
+                <input
+                  type="number"
+                  matInput
+                  [(ngModel)]="rivalinfo[i]"
+                  appSelectOnFocus
+                />
+            </mat-form-field>
+        </div>
+    </mat-card-content>
+
+
+    <h4> 라이벌 평가치 총합</h4>
+    <h2> {{calculateTotalRival()}}  </h2>
+</mat-card>
