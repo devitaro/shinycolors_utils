@@ -25,7 +25,7 @@ import { ScoreComponent } from './containers/score.component';
 import { RivalInfoComponent } from './containers/rival-info.component';
 import { GradeInfoComponent } from './containers/grade-info.component';
 import { ScoreInfoComponent } from './containers/score-info.component';
-import { ResultContainerComponent } from './containers/result-container.component';
+
 
 
 import { ScoreRoutingModule } from './score-routing.module';
@@ -38,7 +38,7 @@ import { ScoreRoutingModule } from './score-routing.module';
     RivalInfoComponent,
     GradeInfoComponent,
     ScoreInfoComponent,
-    ResultContainerComponent,
+
   ],
   imports: [
     CommonModule,

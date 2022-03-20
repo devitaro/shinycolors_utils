@@ -20,7 +20,21 @@
       ></app-score-info>
     </div>
     <div>
-        <h4> 최종 페스 점수</h4>
-        <h2> {{calculateResult()}}  </h2>
+        <mat-card class="w-240">
+            <mat-card-title> 최종 결과</mat-card-title>
+
+            <h4> 행동평가 : {{calculateScore()}} </h4>
+
+
+            <h4> 배율 : {{calculateRate()}}</h4>
+
+            
+            <h2> 최종 페스 점수 : {{calculateResult()}} </h2>
+
+
+
+
+        </mat-card>
+       
     </div>
 </div>
