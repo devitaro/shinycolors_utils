@@ -37,7 +37,7 @@ export class ScoreComponent implements OnInit {
     private titleService: Title
   ) {
     this.titleService.setTitle(
-      'ShinyColors Util - Grade Fes Score calc'
+      'Shinycolors Utils - 그페 점수 계산'
     );
   }
 
